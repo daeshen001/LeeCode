@@ -6,7 +6,7 @@ public class IntegerRevese {
     // TODO Auto-generated method stub
     //System.out.println(reverse(Integer.MIN_VALUE));
     //System.out.println(Integer.MAX_VALUE);
-  System.out.println(reverse(1234));
+  System.out.println(reverse(1234123457));
   }
 
   
@@ -16,12 +16,12 @@ public class IntegerRevese {
     int temp = Math.abs(x);
     int res =0;
     while(temp!=0){
-      if(res>(Integer.MAX_VALUE-temp%10)/10)//运用巧妙的边界问题
+      if(res>(Integer.MAX_VALUE-temp%10)/10)
         return x>0?Integer.MAX_VALUE:Integer.MIN_VALUE;
       res=res*10+temp%10;
-      System.out.println(res+"+"+temp);
+      System.out.println(res+"+"+ temp);
       temp/=10;
             }
-    return x>0?res:-res;
+    return x>0 ? res:-res;
   }
 }
